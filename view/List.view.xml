@@ -1,0 +1,66 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.prMock.controller.List" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="{i18n>PRList}" navButtonPress="onBackHome" showNavButton="true" backgroundDesign="Transparent">
+				<content>
+					<ScrollContainer horizontal="true" vertical="true" width="100%" height="auto" visible="true">
+						<Table id="listTable" width="auto" items="{path : 'data1>/', sorter : [{ path : 'EKGRP', descending: false}]}" noDataText="No data"
+							class="sapUiResponsiveMargin" mode="None" growingScrollToLoad="true" growingThreshold="100" growing="true" showSeparators="All">
+							<columns>
+								<Column width="150px" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+									<header>
+										<Label text="{i18n>PRNumber}" design="Bold"/>
+									</header>
+									<footer/>
+								</Column>
+								<Column width="150px" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+									<header>
+										<Label text="{i18n>CreatedDate}" design="Bold"/>
+									</header>
+									<footer/>
+								</Column>
+								<Column width="150px" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+									<header>
+										<Label text="{i18n>CreatedBy}" design="Bold"/>
+									</header>
+									<footer/>
+								</Column>
+								<Column width="150px" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+									<header>
+										<Label text="{i18n>Categorygrp}" design="Bold"/>
+									</header>
+									<footer/>
+								</Column>
+								<Column width="150px" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+									<header>
+										<Label text="{i18n>Category}" design="Bold"/>
+									</header>
+									<footer/>
+								</Column>
+								<Column width="150px" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+									<header>
+										<Label text="{i18n>PriceTitle}" design="Bold"/>
+									</header>
+									<footer/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem type="Navigation" press="navToItem">
+									<cells>
+										<Text text="{data1>BANFN}"/>
+										<ObjectNumber number="{ parts:['data1>ERDAT'], formatter : '.formatDate' }" unit="" emphasized="true"/>
+										<Text text="{data1>NAME_TEXT}"/>
+										<Text text="{data1>EKNAM}"/>
+										<Text text="{data1>EKGRP}"/>
+										<ObjectNumber number="{data1>VALUE}" unit="{data1>CURRENCY}" emphasized="true"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</ScrollContainer>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

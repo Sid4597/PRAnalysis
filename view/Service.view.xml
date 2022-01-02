@@ -1,0 +1,119 @@
+<mvc:View controllerName="com.sap.build.standard.prMock.controller.Service" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" height="100%" xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App xmlns="sap.m">
+		<pages>
+			<Page title="{i18n>PRAgingTitle}" navButtonPress="onBackHome" showNavButton="true" titleLevel="H1">
+				<content>
+					<VBox backgroundDesign="Solid">
+						<fb:FilterBar showFilterConfiguration="false" useToolbar="true" search="onSearch" showGoButton="true">
+							<fb:filterItems>
+								<fb:FilterItem label="{i18n>datePickerlabel1}" name="A">
+									<fb:control>
+										<DatePicker id="fromDate" valueFormat="MMM d, y"/>
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem label="{i18n>datePickerlabel2}" name="B" class="buttonSize">
+									<fb:control>
+										<DatePicker id="toDate" valueFormat="MMM d, y"/>
+									</fb:control>
+								</fb:FilterItem>
+							</fb:filterItems>
+						</fb:FilterBar>
+					</VBox>
+					<Toolbar height="auto" enabled="true" width="100%" visible="true" design="Transparent">
+						<content>
+							<Title id="prTitle" text="{data1>/}" visible="true" wrapping="false" textAlign="Center" titleStyle="H6"/>
+							<ToolbarSpacer/>
+							<Button id="downloadIdz" text="{i18n>downloadBtn}" press="download" icon="sap-icon://excel-attachment" visible="false" type="Transparent"/>
+						</content>
+					</Toolbar>
+					<ScrollContainer horizontal="true" vertical="true" width="auto" height="auto" visible="true">
+						<Table width="auto" id="prTable" headerText="" items="{path : 'data>/results', sorter : [{ path : 'ERDAT', descending: true}]}"
+							visible="false" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="{data2>/}" growingScrollToLoad="true"
+							class="sapUiResponsiveMargin">
+							<infoToolbar>
+								<Toolbar height="auto" enabled="true" width="100%" visible="false" design="Auto">
+									<content>
+										<Label text="Label" width="100%" visible="true" design="Standard" textDirection="Inherit" textAlign="Begin" required="false"/>
+									</content>
+								</Toolbar>
+							</infoToolbar>
+							<columns>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column0}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>CreatedDate}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>ChangeDate}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column1}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column7}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column2}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column7}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column3}" design="Bold" width="100px"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column7}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column4}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column7}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column5}" design="Bold"/>
+								</Column>
+								<Column width="100px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column7}" design="Bold"/>
+								</Column>
+								<Column width="150px" hAlign="Left" demandPopin="false" minScreenWidth="Phone" popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>Column6}" design="Bold"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<ObjectIdentifier title="" text="{data>BANFN}" visible="true" titleActive="false"/>
+										<Text text="{ parts:['data>BADAT'], formatter : '.formatDate' }" width="auto" visible="true" wrapping="false" textDirection="Inherit"
+											textAlign="Begin" maxLines="2"/>
+										<Text text="{ parts:['data>ERDAT'], formatter : '.formatDate' }" width="auto" visible="true" wrapping="false" textDirection="Inherit"
+											textAlign="Begin" maxLines="2"/>
+										<Text text="{data>NAME1}" width="auto" visible="true" wrapping="true" textDirection="Inherit" textAlign="Begin" maxLines="2"/>
+										<Text text="{ parts:['data>DATE1'], formatter : '.formatDate' }" width="auto" visible="true" wrapping="false" textDirection="Inherit"
+											textAlign="Begin" maxLines="2"/>
+										<Text text="{data>NAME2}" width="auto" visible="true" wrapping="true" textDirection="Inherit" textAlign="Begin" maxLines="2"/>
+										<Text text="{ parts:['data>DATE2'], formatter : '.formatDate' }" width="auto" visible="true" wrapping="false" textDirection="Inherit"
+											textAlign="Begin" maxLines="2"/>
+										<Text text="{data>NAME3}" width="auto" visible="true" wrapping="true" textDirection="Inherit" textAlign="Begin" maxLines="2"/>
+										<Text text="{ parts:['data>DATE3'], formatter : '.formatDate' }" width="auto" visible="true" wrapping="false" textDirection="Inherit"
+											textAlign="Begin" maxLines="2"/>
+										<Text text="{data>NAME4}" width="auto" visible="true" wrapping="true" textDirection="Inherit" textAlign="Begin" maxLines="2"/>
+										<Text text="{ parts:['data>DATE4'], formatter : '.formatDate' }" width="auto" visible="true" wrapping="false" textDirection="Inherit"
+											textAlign="Begin" maxLines="2"/>
+										<Text text="{data>NAME5}" width="auto" visible="true" wrapping="true" textDirection="Inherit" textAlign="Begin" maxLines="2"/>
+										<Text text="{ parts:['data>DATE5'], formatter : '.formatDate' }" width="auto" visible="true" wrapping="false" textDirection="Inherit"
+											textAlign="Begin" maxLines="2"/>
+										<Text text="{data>NETDAYS}" width="auto" visible="true" wrapping="false" textDirection="Inherit" textAlign="Begin" maxLines="2"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</ScrollContainer>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

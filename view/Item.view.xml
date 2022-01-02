@@ -1,0 +1,47 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:layout="sap.ui.layout"
+	controllerName="com.sap.build.standard.prMock.controller.Item" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App xmlns="sap.m">
+		<pages>
+			<Page title="{i18n>PRItemDetails}" navButtonPress="onBackHome" showNavButton="true" backgroundDesign="Transparent">
+				<content>
+					<ScrollContainer horizontal="true" vertical="true" width="100%" height="auto" visible="true">
+					<Table width="auto" noDataText="No data" items="{data2>/results}" mode="None" id="itemDetailsId" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+						class="sapUiResponsiveMargin">
+						<columns>
+							<Column width="150px">
+								<header>
+									<Label text="{i18n>Desc}" design="Bold"/>
+								</header>
+								<footer/>
+							</Column>
+						
+							<Column width="150px" >
+								<header>
+									<Label text="{i18n>Quantity}" design="Bold"/>
+								</header>
+								<footer/>
+							</Column>
+							<Column width="150px">
+								<header>
+									<Label text="{i18n>TotPrice}" design="Bold"/>
+								</header>
+								<footer/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier text="{data2>ItemText}" titleActive="false" visible="true"/>
+									<ObjectNumber number="{data2>Quantity}" unit=" " emphasized="true"/>
+									<ObjectNumber number="{data2>Value}" unit="{data2>Currency}" emphasized="true"/>
+								</cells>
+							</ColumnListItem>
+						
+						</items>
+					</Table>
+					</ScrollContainer>	
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

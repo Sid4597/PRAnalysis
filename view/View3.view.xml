@@ -1,0 +1,2186 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.prMock.controller.View3" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="{i18n>PRList}" navButtonPress="onBackHome" showNavButton="true" titleLevel="H1">
+				<content>
+					<IconTabBar id="idIconTabBarStretchContent" stretchContentHeight="true" backgroundDesign="Transparent" applyContentPadding="false"
+						expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter text="{i18n>Week}">
+								<Toolbar height="auto" enabled="true" width="100%" visible="true" design="Transparent">
+									<content>
+										<ToolbarSpacer/>
+										<Button id="downloadIdzWeek" text="{i18n>downloadBtn}" press="downloadWeekly" icon="sap-icon://excel-attachment" type="Transparent"
+											visible="false"/>
+									</content>
+								</Toolbar>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange1} ({data1>/Year}) - ({data1>/CountWeek1})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek1"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR1I05}"/>
+														<ObjectNumber number="{data1>/CountPR1I04}"/>
+														<ObjectNumber number="{data1>/CountPR1I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange2} ({data1>/Year}) - ({data1>/CountWeek2})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek2"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR2I05}"/>
+														<ObjectNumber number="{data1>/CountPR2I04}"/>
+														<ObjectNumber number="{data1>/CountPR2I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange3} ({data1>/Year}) - ({data1>/CountWeek3})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek3"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR3I05}"/>
+														<ObjectNumber number="{data1>/CountPR3I04}"/>
+														<ObjectNumber number="{data1>/CountPR3I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange4} ({data1>/Year}) - ({data1>/CountWeek4})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek4"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR4I05}"/>
+														<ObjectNumber number="{data1>/CountPR4I04}"/>
+														<ObjectNumber number="{data1>/CountPR4I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange5} ({data1>/Year}) - ({data1>/CountWeek5})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek5"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR5I05}"/>
+														<ObjectNumber number="{data1>/CountPR5I04}"/>
+														<ObjectNumber number="{data1>/CountPR5I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange6} ({data1>/Year}) - ({data1>/CountWeek6})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek6"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR6I05}"/>
+														<ObjectNumber number="{data1>/CountPR6I04}"/>
+														<ObjectNumber number="{data1>/CountPR6I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange7} ({data1>/Year}) - ({data1>/CountWeek7})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek7"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR7I05}"/>
+														<ObjectNumber number="{data1>/CountPR7I04}"/>
+														<ObjectNumber number="{data1>/CountPR7I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange8} ({data1>/Year}) - ({data1>/CountWeek8})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek8"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR8I05}"/>
+														<ObjectNumber number="{data1>/CountPR8I04}"/>
+														<ObjectNumber number="{data1>/CountPR8I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange9} ({data1>/Year}) - ({data1>/CountWeek9})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek9"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Text text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR9I05}"/>
+														<ObjectNumber number="{data1>/CountPR9I04}"/>
+														<ObjectNumber number="{data1>/CountPR9I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange10} ({data1>/Year}) - ({data1>/CountWeek10})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek10"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR10I05}"/>
+														<ObjectNumber number="{data1>/CountPR10I04}"/>
+														<ObjectNumber number="{data1>/CountPR10I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange11} ({data1>/Year}) - ({data1>/CountWeek11})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek11"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR11I05}"/>
+														<ObjectNumber number="{data1>/CountPR11I04}"/>
+														<ObjectNumber number="{data1>/CountPR11I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange12} ({data1>/Year}) - ({data1>/CountWeek12})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek12"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR12I05}"/>
+														<ObjectNumber number="{data1>/CountPR12I04}"/>
+														<ObjectNumber number="{data1>/CountPR12I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange13} ({data1>/Year}) - ({data1>/CountWeek13})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek13"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR13I05}"/>
+														<ObjectNumber number="{data1>/CountPR13I04}"/>
+														<ObjectNumber number="{data1>/CountPR13I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange14} ({data1>/Year}) - ({data1>/CountWeek14})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek14"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR14I05}"/>
+														<ObjectNumber number="{data1>/CountPR14I04}"/>
+														<ObjectNumber number="{data1>/CountPR14I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange15} ({data1>/Year}) - ({data1>/CountWeek15})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek15"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR15I05}"/>
+														<ObjectNumber number="{data1>/CountPR15I04}"/>
+														<ObjectNumber number="{data1>/CountPR15I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange16} ({data1>/Year}) - ({data1>/CountWeek16})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek16"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR16I05}"/>
+														<ObjectNumber number="{data1>/CountPR16I04}"/>
+														<ObjectNumber number="{data1>/CountPR16I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange17} ({data1>/Year}) - ({data1>/CountWeek17})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek17"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR17I05}"/>
+														<ObjectNumber number="{data1>/CountPR17I04}"/>
+														<ObjectNumber number="{data1>/CountPR17I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange18} ({data1>/Year}) - ({data1>/CountWeek18})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek18"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR18I05}"/>
+														<ObjectNumber number="{data1>/CountPR18I04}"/>
+														<ObjectNumber number="{data1>/CountPR18I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange19} ({data1>/Year}) - ({data1>/CountWeek19})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek19"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR19I05}"/>
+														<ObjectNumber number="{data1>/CountPR19I04}"/>
+														<ObjectNumber number="{data1>/CountPR19I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange20} ({data1>/Year}) - ({data1>/CountWeek20})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek20"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR20I05}"/>
+														<ObjectNumber number="{data1>/CountPR20I04}"/>
+														<ObjectNumber number="{data1>/CountPR20I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange21} ({data1>/Year}) - ({data1>/CountWeek21})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek21"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR21I05}"/>
+														<ObjectNumber number="{data1>/CountPR21I04}"/>
+														<ObjectNumber number="{data1>/CountPR21I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange22} ({data1>/Year}) - ({data1>/CountWeek22})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek22"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR22I05}"/>
+														<ObjectNumber number="{data1>/CountPR22I04}"/>
+														<ObjectNumber number="{data1>/CountPR22I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange23} ({data1>/Year}) - ({data1>/CountWeek23})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek23"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR23I05}"/>
+														<ObjectNumber number="{data1>/CountPR23I04}"/>
+														<ObjectNumber number="{data1>/CountPR23I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange24} ({data1>/Year}) - ({data1>/CountWeek24})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek24"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR24I05}"/>
+														<ObjectNumber number="{data1>/CountPR24I04}"/>
+														<ObjectNumber number="{data1>/CountPR24I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange25} ({data1>/Year}) - ({data1>/CountWeek25})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek25"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR25I05}"/>
+														<ObjectNumber number="{data1>/CountPR25I04}"/>
+														<ObjectNumber number="{data1>/CountPR25I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange26} ({data1>/Year}) - ({data1>/CountWeek26})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek26"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR26I05}"/>
+														<ObjectNumber number="{data1>/CountPR26I04}"/>
+														<ObjectNumber number="{data1>/CountPR26I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange27} ({data1>/Year}) - ({data1>/CountWeek27})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek27"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR27I05}"/>
+														<ObjectNumber number="{data1>/CountPR27I04}"/>
+														<ObjectNumber number="{data1>/CountPR27I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange28} ({data1>/Year}) - ({data1>/CountWeek28})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek28"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR28I05}"/>
+														<ObjectNumber number="{data1>/CountPR28I04}"/>
+														<ObjectNumber number="{data1>/CountPR28I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange29} ({data1>/Year}) - ({data1>/CountWeek29})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek29"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR29I05}"/>
+														<ObjectNumber number="{data1>/CountPR29I04}"/>
+														<ObjectNumber number="{data1>/CountPR29I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange30} ({data1>/Year}) - ({data1>/CountWeek30})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek30"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR30I05}"/>
+														<ObjectNumber number="{data1>/CountPR30I04}"/>
+														<ObjectNumber number="{data1>/CountPR30I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange31} ({data1>/Year}) - ({data1>/CountWeek31})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek31"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR31I05}"/>
+														<ObjectNumber number="{data1>/CountPR31I04}"/>
+														<ObjectNumber number="{data1>/CountPR31I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange32} ({data1>/Year}) - ({data1>/CountWeek32})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek32"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR32I05}"/>
+														<ObjectNumber number="{data1>/CountPR32I04}"/>
+														<ObjectNumber number="{data1>/CountPR32I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange33} ({data1>/Year}) - ({data1>/CountWeek33})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek33"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR33I05}"/>
+														<ObjectNumber number="{data1>/CountPR33I04}"/>
+														<ObjectNumber number="{data1>/CountPR33I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange34} ({data1>/Year}) - ({data1>/CountWeek34})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek34"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR34I05}"/>
+														<ObjectNumber number="{data1>/CountPR34I04}"/>
+														<ObjectNumber number="{data1>/CountPR34I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange35} ({data1>/Year}) - ({data1>/CountWeek35})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek35"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR35I05}"/>
+														<ObjectNumber number="{data1>/CountPR35I04}"/>
+														<ObjectNumber number="{data1>/CountPR35I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange36} ({data1>/Year}) - ({data1>/CountWeek36})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek36"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR36I05}"/>
+														<ObjectNumber number="{data1>/CountPR36I04}"/>
+														<ObjectNumber number="{data1>/CountPR36I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange37} ({data1>/Year}) - ({data1>/CountWeek37})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek37"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR37I05}"/>
+														<ObjectNumber number="{data1>/CountPR37I04}"/>
+														<ObjectNumber number="{data1>/CountPR37I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange38} ({data1>/Year}) - ({data1>/CountWeek38})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek38"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR38I05}"/>
+														<ObjectNumber number="{data1>/CountPR38I04}"/>
+														<ObjectNumber number="{data1>/CountPR38I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange39} ({data1>/Year}) - ({data1>/CountWeek39})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek39"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR39I05}"/>
+														<ObjectNumber number="{data1>/CountPR39I04}"/>
+														<ObjectNumber number="{data1>/CountPR39I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange40} ({data1>/Year}) - ({data1>/CountWeek40})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek40"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR40I05}"/>
+														<ObjectNumber number="{data1>/CountPR40I04}"/>
+														<ObjectNumber number="{data1>/CountPR40I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange41} ({data1>/Year}) - ({data1>/CountWeek41})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek41"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR41I05}"/>
+														<ObjectNumber number="{data1>/CountPR41I04}"/>
+														<ObjectNumber number="{data1>/CountPR41I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange42} ({data1>/Year}) - ({data1>/CountWeek42})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek42"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR42I05}"/>
+														<ObjectNumber number="{data1>/CountPR42I04}"/>
+														<ObjectNumber number="{data1>/CountPR42I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange43} ({data1>/Year}) - ({data1>/CountWeek43})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek43"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR43I05}"/>
+														<ObjectNumber number="{data1>/CountPR43I04}"/>
+														<ObjectNumber number="{data1>/CountPR43I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange44} ({data1>/Year}) - ({data1>/CountWeek44})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek44"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR44I05}"/>
+														<ObjectNumber number="{data1>/CountPR44I04}"/>
+														<ObjectNumber number="{data1>/CountPR44I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange45} ({data1>/Year}) - ({data1>/CountWeek45})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek45"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR45I05}"/>
+														<ObjectNumber number="{data1>/CountPR45I04}"/>
+														<ObjectNumber number="{data1>/CountPR45I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange46} ({data1>/Year}) - ({data1>/CountWeek46})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek46"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR46I05}"/>
+														<ObjectNumber number="{data1>/CountPR46I04}"/>
+														<ObjectNumber number="{data1>/CountPR46I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange47} ({data1>/Year}) - ({data1>/CountWeek47})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek47"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR47I05}"/>
+														<ObjectNumber number="{data1>/CountPR47I04}"/>
+														<ObjectNumber number="{data1>/CountPR47I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange48} ({data1>/Year}) - ({data1>/CountWeek48})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek48"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR48I05}"/>
+														<ObjectNumber number="{data1>/CountPR48I04}"/>
+														<ObjectNumber number="{data1>/CountPR48I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange49} ({data1>/Year}) - ({data1>/CountWeek49})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek49"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR49I05}"/>
+														<ObjectNumber number="{data1>/CountPR49I04}"/>
+														<ObjectNumber number="{data1>/CountPR49I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange50} ({data1>/Year}) - ({data1>/CountWeek50})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek50"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR50I05}"/>
+														<ObjectNumber number="{data1>/CountPR50I04}"/>
+														<ObjectNumber number="{data1>/CountPR50I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange51} ({data1>/Year}) - ({data1>/CountWeek51})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek51"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR51I05}"/>
+														<ObjectNumber number="{data1>/CountPR51I04}"/>
+														<ObjectNumber number="{data1>/CountPR51I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text=" {i18n>weekrange52} ({data1>/Year}) - ({data1>/CountWeek52})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToWeek52"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data1>/CountPR52I05}"/>
+														<ObjectNumber number="{data1>/CountPR52I04}"/>
+														<ObjectNumber number="{data1>/CountPR52I06}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+							</IconTabFilter>
+							<IconTabFilter text="{i18n>Month}">
+								<Toolbar height="auto" enabled="true" width="100%" visible="true" design="Transparent">
+									<content>
+										<ToolbarSpacer/>
+										<Button id="downloadIdzMonth" text="Download" press="downloadMonthly" icon="sap-icon://excel-attachment" type="Transparent"/>
+									</content>
+								</Toolbar>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>January} {data2>/Year} - ({data2>/CountJan})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthJan"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Jan}"/>
+														<ObjectNumber number="{data2>/I04Jan}"/>
+														<ObjectNumber number="{data2>/I06Jan}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>February} {data2>/Year} - ({data2>/CountFeb})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthfeb"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Feb}"/>
+														<ObjectNumber number="{data2>/I04Feb}"/>
+														<ObjectNumber number="{data2>/I06Feb}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>March} {data2>/Year} - ({data2>/CountMar})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthMar"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Mar}"/>
+														<ObjectNumber number="{data2>/I04Mar}"/>
+														<ObjectNumber number="{data2>/I06Mar}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>April} {data2>/Year} - ({data2>/CountApr})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthApr"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Apr}"/>
+														<ObjectNumber number="{data2>/I04Apr}"/>
+														<ObjectNumber number="{data2>/I06Apr}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>May} {data2>/Year} - ({data2>/CountMay})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthMay"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05May}"/>
+														<ObjectNumber number="{data2>/I04May}"/>
+														<ObjectNumber number="{data2>/I06May}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>June} {data2>/Year} - ({data2>/CountJun})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthJun"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Jun}"/>
+														<ObjectNumber number="{data2>/I04Jun}"/>
+														<ObjectNumber number="{data2>/I06Jun}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>July} {data2>/Year} - ({data2>/CountJul})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthJul"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Jul}"/>
+														<ObjectNumber number="{data2>/I04Jul}"/>
+														<ObjectNumber number="{data2>/I06Jul}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>August} {data2>/Year} - ({data2>/CountAug})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthAug"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Aug}"/>
+														<ObjectNumber number="{data2>/I04Aug}"/>
+														<ObjectNumber number="{data2>/I06Aug}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>September} {data2>/Year} - ({data2>/CountSep})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthSep"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Sep}"/>
+														<ObjectNumber number="{data2>/I04Sep}"/>
+														<ObjectNumber number="{data2>/I06Sep}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>October} {data2>/Year} - ({data2>/CountOct})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthOct"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Oct}"/>
+														<ObjectNumber number="{data2>/I04Oct}"/>
+														<ObjectNumber number="{data2>/I06Oct}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>November} {data2>/Year} - ({data2>/CountNov})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthNov"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Nov}"/>
+														<ObjectNumber number="{data2>/I04Nov}"/>
+														<ObjectNumber number="{data2>/I06Nov}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>December} {data2>/Year} - ({data2>/CountDec})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToMonthDec"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data2>/I05Dec}"/>
+														<ObjectNumber number="{data2>/I04Dec}"/>
+														<ObjectNumber number="{data2>/I06Dec}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+							</IconTabFilter>
+							<IconTabFilter text="{i18n>Yearly}">
+								<Toolbar height="auto" enabled="true" width="100%" visible="true" design="Transparent">
+									<content>
+										<ToolbarSpacer/>
+										<Button id="downloadIdzYear" text="Download" press="downloadYearly" icon="sap-icon://excel-attachment" type="Transparent"/>
+									</content>
+								</Toolbar>
+								<Panel expandable="true" expanded="false" headerText="" expandAnimation="true" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar >
+											<Title text="{i18n>Year} {data3>/Year} - ({data3>/CountYear})" titleStyle="H5"/>
+											<ToolbarSpacer/>
+											<Button text="List" press="navToYear"></Button>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Table>
+											<columns>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Capex}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Revenue}" design="Bold"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Label text="{i18n>Service}" design="Bold"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem press="navToItemDetails">
+													<cells>
+														<ObjectNumber number="{data3>/I05Year}"/>
+														<ObjectNumber number="{data3>/I04Year}"/>
+														<ObjectNumber number="{data3>/I06Year}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</content>
+								</Panel>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

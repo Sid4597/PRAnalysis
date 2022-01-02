@@ -1,0 +1,9 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.prMock.controller.DetailPage1" xmlns:mode="sap.m.ImageMode.Background" xmlns="sap.m">
+	<Page title="" showHeader="false" backgroundDesign="Transparent" showFooter="false" showNavButton="false" class="bgImage">
+		<content>
+			<VBox width="500px">
+				<Text text="{i18n>DetailPageTitle}" class="myCustomText"/>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

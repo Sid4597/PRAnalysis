@@ -1,0 +1,56 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.prMock.controller.View4" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="{i18n>budgetTitle} ( {data2>/} )" navButtonPress="onBackHome" showNavButton="true" titleLevel="H1">
+				<content>
+					<Toolbar>
+						<ToolbarSpacer/>
+					</Toolbar>
+					<Toolbar>
+						<SearchField search="filterGlobally" placeholder="Filter" width="15rem"/>
+						<ToolbarSpacer/>
+						<Button id="downloadIdz" text="{i18n>budgetDownload}" press="download" icon="sap-icon://excel-attachment" type="Transparent" visible="false"/>
+					</Toolbar>
+					<ScrollContainer horizontal="true" vertical="true" width="100%" height="auto" visible="true">
+						<Table width="auto" items="{data>/results}" id="budgetList" growing="true" growingScrollToLoad="true" growingThreshold="{data2>/}">
+							<columns>
+								<Column minScreenWidth="Tablet" demandPopin="true" width="100px" hAlign="Left"   popinDisplay="Inline" mergeDuplicates="false">
+									<!--<Text text="Cost Center No"/>-->
+									<Label text="{i18n>budgetColumn1}" design="Bold"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" width="150px" hAlign="Left"   popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>budgetColumn2}" design="Bold"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" width="100px" hAlign="Left"   popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>budgetColumn3}" design="Bold"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" width="100px" hAlign="Left"   popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>budgetColumn4}" design="Bold"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" width="100px" hAlign="Left"   popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>budgetColumn5}" design="Bold"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" width="100px" hAlign="Left"   popinDisplay="Inline" mergeDuplicates="false">
+									<Label text="{i18n>budgetColumn6}" design="Bold"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem press="navToItemDetails">
+									<cells>
+										<ObjectIdentifier text="{data>CostCenter}" titleActive="false" visible="true"/>
+										<Text text="{data>CostCenterName}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										<ObjectNumber number="{data>BudgetVal}" unit="" emphasized="true" state="None" textAlign="Right"/>
+										<ObjectNumber number="{data>Actual}" emphasized="true" state="None" textAlign="Right"/>
+										<ObjectNumber number="{data>Committed}" emphasized="true" state="None" textAlign="Right"/>
+										<ObjectNumber number="{data>Balance}" emphasized="true" state="None" textAlign="Right"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</ScrollContainer>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

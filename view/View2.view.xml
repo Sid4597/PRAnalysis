@@ -1,0 +1,126 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.build.standard.prMock.controller.View2"
+	xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" height="100%" xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:chart="sap.chart" xmlns:data="sap.chart.data" displayBlock="true"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds">
+	<App>
+		<pages>
+			<Page title="{i18n>pendingPRtitle}" navButtonPress="onBackHome" showNavButton="true" titleLevel="H1">
+				<content>
+					<Toolbar height="auto" enabled="true" width="100%" visible="true" design="Transparent">
+						<content>
+							<ToolbarSpacer/>
+							<Button id="downloadIdz" text="{i18n>downloadBtn}" press="download" icon="sap-icon://excel-attachment" type="Transparent"/>
+						</content>
+					</Toolbar>
+					<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='stacked_column'>
+						<viz:dataset>
+							<viz.data:FlattenedDataset data="{path : 'stackedChart>/chartValue', filters : [{ path : 'EKGRP', operator : 'NE', value1 : 'TOT'}]}">
+								<viz.data:dimensions>
+									<viz.data:DimensionDefinition name="Categories" value="{stackedChart>EKNAM}"/>
+								</viz.data:dimensions>
+								<viz.data:measures>
+									<viz.data:MeasureDefinition name="0-15 days" value="{stackedChart>P0_15}"/>
+									<viz.data:MeasureDefinition name="16-30 days" value="{stackedChart>P16_30}"/>
+									<viz.data:MeasureDefinition name=">30 days" value="{stackedChart>P30_GT}" />
+									</viz.data:measures>
+								</viz.data:FlattenedDataset>
+							</viz:dataset>
+							<viz:feeds>
+								<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="0-15 days,16-30 days,>30 days"/>
+								<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Categories"/>
+							</viz:feeds>
+						</viz:VizFrame>
+						<ScrollContainer horizontal="true" vertical="true" width="100%" height="auto" visible="true">
+							
+							<Table id="PRGROUP" items="{data3>/results}" width="auto" headerText="" visible="true" noDataText="No data" mode="None"
+								showSeparators="All" growing="true" growingScrollToLoad="true" class="sapUiResponsiveMargin">
+								<columns>
+									<Column>
+										<header>
+											<Label text="Purchase Group" design="Bold"/>
+										</header>
+									</Column>
+									<Column>
+										<header>
+											<Label text="Category Name" design="Bold"/>
+										</header>
+									</Column>
+									<Column>
+										<header>
+											<Label text="0-15 Days" design="Bold"/>
+										</header>
+									</Column>
+									<Column>
+										<header>
+											<Label text="16-30 Days" design="Bold"/>
+										</header>
+									</Column>
+									<Column>
+										<header>
+											<Label text=">30 Days" design="Bold"/>
+											</header>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Text text="{data3>EKGRP}"/>
+												<Text text="{data3>EKNAM}"/>
+												<Text text="{data3>P0_15}"/>
+												<Text text="{data3>P16_30}"/>
+												<Text text="{data3>P30_GT}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Toolbar>
+									<ToolbarSpacer></ToolbarSpacer>
+								</Toolbar>
+								<Table id="PendingPR" items="{path : 'data1>/results', sorter : [{ path : 'EKNAM', descending: false}]}" width="auto" headerText=""
+									visible="true" noDataText="No data" mode="None" showSeparators="All" growing="true" growingScrollToLoad="true"
+									class="sapUiResponsiveMargin">
+									<columns>
+										<Column id="C1">
+											<header>
+												<Label id="L1" text="{i18n>Category}" design="Bold"/>
+											</header>
+										</Column>
+										<Column id="C2">
+											<header>
+												<Label text="{i18n>User}" design="Bold"/>
+											</header>
+										</Column>
+										<Column id="C3">
+											<header>
+												<Label text="{i18n>range1}" design="Bold"/>
+											</header>
+										</Column>
+										<Column id="C4">
+											<header>
+												<Label text="{i18n>range2}" design="Bold"/>
+											</header>
+										</Column>
+										<Column id="C5">
+											<header>
+												<Label text="{i18n>range3}" design="Bold"/>
+											</header>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem id="__item1">
+											<cells>
+												<Text text="{data1>EKNAM}"/>
+												<Text text="{data1>NAME_TEXT}"/>
+												<Text text="{data1>P0_15}"/>
+												<Text text="{data1>P16_30}"/>
+												<Text text="{data1>P30_GT}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</ScrollContainer>
+						</content>
+					</Page>
+				</pages>
+			</App>
+		</mvc:View>

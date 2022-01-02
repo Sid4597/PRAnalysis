@@ -1,0 +1,74 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:fb="sap.ui.comp.filterbar"
+	controllerName="com.sap.build.standard.prMock.controller.Vendor" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>VenHis}" navButtonPress="onBackHome" showNavButton="true">
+				<content>
+					<l:VerticalLayout width="100%">
+						<fb:FilterBar showFilterConfiguration="false" useToolbar="true" search="onSearch" showGoButton="true">
+							<fb:filterItems>
+								<fb:FilterItem label="{i18n>datePickerlabel1}" name="A">
+									<fb:control>
+										<DatePicker id="fromDate" valueFormat="MMM d, y"/>
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem label="{i18n>datePickerlabel2}" name="B" class="buttonSize">
+									<fb:control>
+										<DatePicker id="toDate" valueFormat="MMM d, y"/>
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem label="{i18n>VenNr}" name="D" class="buttonSize">
+									<fb:control>
+										<ComboBox id="vendorNumber" name="vendornumber" items="{data1>/results}" showSecondaryValues="true" filterSecondaryValues="true">
+											<core:ListItem key="{data1>Mcod1}" text="{data1>Lifnr}" additionalText="{data1>Mcod1}"/>
+										</ComboBox>
+									</fb:control>
+								</fb:FilterItem>
+							</fb:filterItems>
+						</fb:FilterBar>
+					</l:VerticalLayout>
+					<Toolbar height="auto" enabled="true" width="100%" visible="true" design="Transparent">
+						<content>
+							<ToolbarSpacer/>
+							<Button id="downloadIdz" text="{i18n>downloadBtn}" press="download" icon="sap-icon://excel-attachment" visible="false" type="Transparent"/>
+						</content>
+					</Toolbar>
+					<ScrollContainer horizontal="true" vertical="true" width="100%" height="auto" visible="true">
+					<Table width="auto" id="Vendor" items="{path : 'data>/results', sorter : [{ path : 'MATNR', descending: true}]}" visible="false"
+						growingScrollToLoad="true" class="sapUiResponsiveMargin" growingThreshold="{data2>/}">
+						<columns>
+							<Column width="100px" minScreenWidth="Phone" demandPopin="true">
+								<Text text="Material Group"/>
+								<Label text="{i18n>MatNr}" design="Bold"/>
+							</Column>
+							<Column width="200px" minScreenWidth="Phone" demandPopin="true">
+								<Label text="{i18n>MatDesc}" design="Bold"/>
+							</Column>
+							<Column width="100px" minScreenWidth="Phone" demandPopin="true">
+								<Label text="{i18n>Months}" design="Bold"/>
+							</Column>
+								<Column width="100px" minScreenWidth="Phone" demandPopin="true">
+								<Label text="{i18n>AvgQty}" design="Bold"/>
+							</Column>
+							<Column width="100px" minScreenWidth="Phone" demandPopin="true">
+								<Label text="{i18n>AvgPr}" design="Bold"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem press="navToItemDetails">
+								<cells>
+									<Text text="{data>MATNR}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<Text text="{data>MAKTX}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<Text text="{data>PO_MONTH}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ObjectNumber number="{ parts:['data>MENGE'], type: 'sap.ui.model.type.Integer' }" unit="" emphasized="true"/>
+									<ObjectNumber number="{data>NETPR}" unit="INR" emphasized="true"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					</ScrollContainer>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

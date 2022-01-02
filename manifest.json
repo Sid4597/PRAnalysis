@@ -1,0 +1,388 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.standard.prMock",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"ach": "ach",
+		"resources": "resources.json",
+		"dataSources": {
+			"MM_PR_ANALYSIS_01_SRV": {
+				"uri": "/sap/opu/odata/aag362/MM_PR_ANALYSIS_01_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/MM_PR_ANALYSIS_01_SRV/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		}
+	},
+	"sap.fiori": {
+		"_version": "1.1.0",
+		"registrationIds": [],
+		"archeType": "transactional"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://detail-view",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "com.sap.build.standard.prMock.view.App",
+			"type": "XML",
+			"async": false,
+			"id": "app"
+		},
+		"autoPrefixId": true,
+		"dependencies": {
+			"minUI5Version": "1.44.13",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.viz": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"PR_ANALYSIS_DATA": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneTime",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "MM_PR_ANALYSIS_01_SRV",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.standard.prMock.view",
+				"controlId": "idAppControl",
+				"clearTarget": false,
+				"controlAggregation": "detailPages",
+				"async": false,
+				"bypassed": {
+					"target": [
+						"DetailPage1",
+						"MasterPage1"
+					]
+				}
+			},
+			"targets": {
+				"MasterPage1": {
+					"controlAggregation": "masterPages",
+					"viewName": "MasterPage1",
+					"viewId": "MasterPage1",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DetailPage1": {
+					"controlAggregation": "detailPages",
+					"viewName": "DetailPage1",
+					"viewId": "DetailPage1",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"View2": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "View2",
+					"viewLevel": 4
+				},
+				"View3": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "View3",
+					"viewLevel": 5
+				},
+				"View4": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "View4",
+					"viewLevel": 6
+				},
+				"View5": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "View5",
+					"viewLevel": 7
+				},
+				"Revenue": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Revenue",
+					"viewLevel": 8
+				},
+				"Service": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Service",
+					"viewLevel": 7
+				},
+				"CapexService": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "CapexService",
+					"viewLevel": 9
+				},
+				"Capex": {
+					"viewType": "XML",
+					"transition": "flip",
+					"clearAggregation": true,
+					"viewName": "Capex",
+					"viewLevel": 9
+				},
+				"List": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "List",
+					"viewLevel": 10
+				},
+				"Graph": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Graph",
+					"viewLevel": 11
+				},
+				"Item": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Item",
+					"viewLevel": 12
+				},
+				"Page1": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Page1",
+					"viewLevel": 13
+				},
+				"Vendor": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Vendor",
+					"viewLevel": 14
+				},
+				"Aging": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Aging",
+					"viewLevel": 15
+				}
+			},
+			"routes": [
+				{
+					"pattern": "MasterPage1",
+					"name": "MasterPage1",
+					"target": [
+						"DetailPage1",
+						"MasterPage1"
+					]
+				},
+				{
+					"pattern": "MasterPage1/DetailPage1",
+					"name": "DetailPage1",
+					"target": [
+						"MasterPage1",
+						"DetailPage1"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "View2",
+					"target": [
+						"DetailPage1",
+						"MasterPage1"
+					]
+				},
+				{
+					"name": "View2",
+					"pattern": "View2",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"View2"
+					]
+				},
+				{
+					"name": "View3",
+					"pattern": "View3",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"View3"
+					]
+				},
+				{
+					"name": "View4",
+					"pattern": "View4",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"View4"
+					]
+				},
+				{
+					"name": "View5",
+					"pattern": "View5",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"View5"
+					]
+				},
+				{
+					"name": "Revenue",
+					"pattern": "Revenue",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Revenue"
+					]
+				},
+				{
+					"name": "Service",
+					"pattern": "Service",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Service"
+					]
+				},
+				{
+					"name": "CapexService",
+					"pattern": "CapexService",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"CapexService"
+					]
+				},
+				{
+					"name": "Capex",
+					"pattern": "Capex",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Capex"
+					]
+				},
+				{
+					"name": "List",
+					"pattern": "List/{weekDetails}",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"List"
+					]
+				},
+				{
+					"name": "Graph",
+					"pattern": "Graph",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Graph"
+					]
+				},
+				{
+					"name": "Item",
+					"pattern": "Item/{rowDetails}",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Item"
+					]
+				},
+				{
+					"name": "Page1",
+					"pattern": "Page1",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Page1"
+					]
+				},
+				{
+					"name": "Vendor",
+					"pattern": "Vendor",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Vendor"
+					]
+				},
+				{
+					"name": "Aging",
+					"pattern": "Aging",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Aging"
+					]
+				}
+			]
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/aag362/pranalysis",
+		"_version": "1.1.0"
+	}
+}

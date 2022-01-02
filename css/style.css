@@ -1,0 +1,101 @@
+.myCustomText
+{ 
+  
+   display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 580px 0px 0px 280px;
+  width: 450px;
+  border: none;
+  font: normal 25px/1 "Fredoka One", Helvetica, sans-serif;
+  color: rgba(0,0,0, 1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+}
+.bgImage
+{
+	opacity: 0.9;
+	filter: alpha(opacity=30);
+	background-image:url("../elantas1.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 80%;
+	height: 80%;
+	display: block;
+	margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*.myCustomText{*/
+/*  display: inline-block;*/
+/*  -webkit-box-sizing: content-box;*/
+/*  -moz-box-sizing: content-box;*/
+/*  box-sizing: content-box;*/
+/*  padding: 25px;*/
+/*  border: none;*/
+/*  font: normal 50px/1 "Fredoka One", Helvetica, sans-serif;*/
+/*  color: rgba(0,0,0, 1);*/
+/*  text-align: center;*/
+/*  -o-text-overflow: clip;*/
+/*  text-overflow: clip;*/
+/* }*/
+
+#bgColor{
+	color:#019ce0;
+}
+
+.bgColor1{
+	color:#019ce0;
+}
+
+#dualline
+{	
+	width : "auto"
+}
+
+.mathisGoBtn
+{
+    margin: -33px 0px 0px 870px;
+}
+
+.buttonSize 
+{
+      margin: -93px 0px 0px 630px
+}
+
+.matDownloadButton
+{
+    margin: -5px 0px 0px 770px;
+}
+
+.goBtnSize
+{
+    margin: -33px 0px 0px 657px;
+}
+
+.goButtonSizeAging
+{
+    margin: -33px 0px 0px 870px;
+}
+
+.agingDownloadBtn
+{
+ margin: -5px 0px 0px 700px;	
+}
+
+.goBtnSize1
+{
+    margin: -33px 0px 0px 500px;
+}
+
+.mathisDownloadBtn
+{
+    margin: 20px 0px 0px 570px;
+}
+
+.columbg1
+{
+ color:blue;	
+}

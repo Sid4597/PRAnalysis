@@ -1,0 +1,99 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:fb="sap.ui.comp.filterbar"
+	controllerName="com.sap.build.standard.prMock.controller.View5" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>MatHis}" navButtonPress="onBackHome" showNavButton="true" titleLevel="H1">
+				<content>
+					<l:VerticalLayout width="100%">
+						<fb:FilterBar showFilterConfiguration="false" useToolbar="true" search="onSearch" showGoButton="true">
+							<fb:filterItems>
+								<fb:FilterItem label="{i18n>datePickerlabel1}" name="A">
+									<fb:control>
+										<DatePicker id="fromDate" valueFormat="MMM d, y"/>
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem label="{i18n>datePickerlabel2}" name="B" class="buttonSize">
+									<fb:control>
+										<DatePicker id="toDate" valueFormat="MMM d, y"/>
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem label="Plant" name="C">
+									<fb:control>
+										<ComboBox items="{data7>/results}" id="plantId" showSecondaryValues="true" filterSecondaryValues="true">
+											<core:ListItem key="{data7>Name1}" text="{data7>Werks}" additionalText="{data7>Name1}"/>
+										</ComboBox>
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem label="{i18n>MatGrp}" name="D">
+									<fb:control>
+										<ComboBox id="materialGroup" name="materialGroup" items="{data1>/results}" change="getMaterialList" showSecondaryValues="true"
+											filterSecondaryValues="true">
+											<core:ListItem key="{data1>Wgbez}" text="{data1>Matkl}" additionalText="{data1>Wgbez}"/>
+										</ComboBox>
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem label="{i18n>MatNr}" name="E">
+									<fb:control>
+										<ComboBox id="material" items="{data2>/results}" showSecondaryValues="true" filterSecondaryValues="true">
+											<core:ListItem key="{data2>Maktg}" text="{data2>Matnr}" additionalText="{data2>Maktg}"/>
+										</ComboBox>
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem label="Vendor" name="F">
+									<fb:control>
+										<ComboBox id="vendorId" items="{data6>/results}" showSecondaryValues="true" filterSecondaryValues="true">
+											<core:ListItem key="{data6>Mcod1}" text="{data6>Lifnr}" additionalText="{data6>Mcod1}"/>
+										</ComboBox>
+									</fb:control>
+								</fb:FilterItem>
+							</fb:filterItems>
+						</fb:FilterBar>
+					</l:VerticalLayout>
+					<Toolbar height="auto" enabled="true" width="100%" visible="true" design="Transparent">
+						<content>
+							<ToolbarSpacer/>
+							<Button id="downloadIdz" text="{i18n>downloadBtn}" press="download" icon="sap-icon://excel-attachment" visible="false" type="Transparent"/>
+						</content>
+					</Toolbar>
+					<ScrollContainer horizontal="true" vertical="true" width="auto" height="auto" visible="true">
+						<Table width="auto" id="history" items="{data>/results}" visible="false" class="sapUiResponsiveMargin" growingThreshold="{data3>/}">
+							<columns>
+								<Column width="100px" minScreenWidth="Phone" demandPopin="false" hAlign="Left"   popinDisplay="Inline" mergeDuplicates="false">
+									   
+									<!--<Text text="Material Group"/>-->
+									<Label text="{i18n>VenNr}" design="Bold"/>
+								</Column>
+								<Column width="200px" minScreenWidth="Phone" demandPopin="true" hAlign="Left"   popinDisplay="Inline" mergeDuplicates="false">
+									<!--<Text text="Material Details"/>-->
+									<Label text="{i18n>VenName}" design="Bold"/>
+								</Column>
+								<Column width="100px" minScreenWidth="Phone" demandPopin="true" hAlign="Left"   popinDisplay="Inline" mergeDuplicates="false">
+									<!--<Text text="Request Date "/>-->
+									<Label text="{i18n>Months}" design="Bold"/>
+								</Column>
+								<Column width="100px" minScreenWidth="Phone" demandPopin="true" hAlign="Left">
+									<Label text="{i18n>AvgQty}" design="Bold"/>
+								</Column>
+								<Column width="100px" minScreenWidth="Phone" demandPopin="true" hAlign="Right"   popinDisplay="Inline" mergeDuplicates="false">
+									<!--<Text text="Quantity"/>-->
+									<Label text="{i18n>AvgPr}" design="Bold"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem press="navToItemDetails">
+									<cells>
+										<Text text="{data>LIFNR}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										<Text text="{data>NAME1}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										<Text text="{data>MONTH}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										<ObjectNumber number="{ parts:['data>AVGQTY'], type: 'sap.ui.model.type.Integer' }" unit="" emphasized="true"/>
+										<ObjectNumber number="{data>AVGNETPR}" unit="INR" emphasized="true"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</ScrollContainer>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

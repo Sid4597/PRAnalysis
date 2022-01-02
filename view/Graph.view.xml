@@ -1,0 +1,27 @@
+
+
+
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:chart="sap.chart" xmlns:data="sap.chart.data" 	displayBlock="true"
+	xmlns:layout="sap.ui.commons.layout" controllerName="com.sap.build.standard.prMock.controller.Graph"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<!--sap_m_Page_0-content-sap_chart_ColumnChart-1536048787502-->
+		<pages>
+			<Page title="Column Chart" showNavButton="true" navButtonPress="onBack">
+     			<content>
+							<chart:Chart id="StackedColumnChart" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="c,r,s" chartType="stacked_column" selectionMode="Single" uiConfig="{}" vizProperties="{plotArea:{dataLabel:{visible: true,hideWhenOverlap:true}}}">
+		                <chart:dimensions>
+		                    <data:Dimension name="__id" label="Purchase Requisitions" role="category" textProperty="dim0"/>
+		                </chart:dimensions>
+		                <chart:measures>
+		                    <data:Measure name="c" label="0-15" role="axis2"/>
+		                    <data:Measure name="r" label="16-30" role="axis2"/>
+		                    <data:Measure name="s" label=">30" role="axis2"/>
+		                </chart:measures>
+		            </chart:Chart>
+				</content>
+				
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

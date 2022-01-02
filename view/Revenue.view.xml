@@ -1,0 +1,92 @@
+<mvc:View 
+xmlns:core="sap.ui.core" 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+xmlns:f="sap.ui.layout.form" 
+xmlns:layout="sap.ui.layout"
+controllerName="com.sap.build.standard.prMock.controller.Revenue" 
+xmlns:html="http://www.w3.org/1999/xhtml">
+	<App  xmlns="sap.m">
+		<pages>
+			<Page title="PR Revenue Details" navButtonPress="onBackHome" showNavButton="true" backgroundDesign="Transparent">
+				<content>
+				
+					<VBox class="sapUiSmallMargin" backgroundDesign="Solid">
+						<f:Form id="FormDisplay354" editable="false">
+							<f:title>
+								<core:Title text=" PR Information"/>
+							</f:title>
+							<f:layout>
+								<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4"
+									emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+							</f:layout>
+							<f:formContainers>
+								<f:FormContainer>
+									<f:formElements>
+										<f:FormElement label="Purchase Requisition">
+											<f:fields>
+												<Text text="10078648" id="nameText"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Material">
+											<f:fields>
+												<Text text="Boom Cylinder Seal Kit"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Quantity">
+											<f:fields>
+												<Text text="15 Each"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Price per Unit">
+											<f:fields>
+												<Text text="3,500.00 USD"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Material Group">
+											<f:fields>
+												<Text text="Mechanics (00104)"/>
+											</f:fields>
+										</f:FormElement>
+										
+									</f:formElements>
+								</f:FormContainer>
+							</f:formContainers>
+						</f:Form>
+						
+						
+						
+						<f:Form id="FormDisplay355" editable="false">
+							<f:title>
+								<core:Title text=" Delivery On"/>
+							</f:title>
+							<f:layout>
+								<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4"
+									emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+							</f:layout>
+							<f:formContainers>
+								<f:FormContainer>
+									<f:formElements>
+										<f:FormElement label="Plant">
+											<f:fields>
+												<Text text="Atlanta (3200)" id="nameText1"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Delivery Address">
+											<f:fields>
+												<Text text="867 1 300 Peach tree street South, ATLANTA GA 30310, United States"/>
+											</f:fields>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+							</f:formContainers>
+						</f:Form>
+					</VBox>
+					
+					
+	
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

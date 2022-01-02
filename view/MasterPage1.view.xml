@@ -1,0 +1,21 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+controllerName="com.sap.build.standard.prMock.controller.MasterPage1"
+xmlns="sap.m">
+    <Page title="{i18n>MasterPageTitle} " id="bgColor" showHeader="true" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
+         <content>
+         	<Button text="{i18n>Button1}" iconFirst="true" width="319.61000000px" enabled="true" visible="true" iconDensityAware="false" type="Emphasized" press="navToService"/>
+            <Button text="{i18n>Button2}" iconFirst="true" width="319.61000000px" enabled="true" visible="true" iconDensityAware="false" type="Emphasized" press="navToPR"/>
+            <Button text="{i18n>Button3}" iconFirst="true" width="319.61000000px" enabled="true" visible="true" iconDensityAware="false" type="Emphasized" press="navToPRList"/>
+            <Button text="{i18n>Button4}" iconFirst="true" width="319.61000000px" enabled="true" visible="true" iconDensityAware="false" type="Emphasized" press="navToBudgetView"/>
+            <Button text="{i18n>Button5}" iconFirst="true" width="319.61000000px" enabled="true" visible="true" iconDensityAware="false" type="Emphasized" press="navToHistory"/>
+            <Button text="{i18n>Button6}" iconFirst="true" width="319.61000000px" enabled="true" visible="true" iconDensityAware="false" type="Emphasized" press="navToVendor"/>
+
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="auto" design="Auto" enabled="true" visible="true">
+                <content/>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>
